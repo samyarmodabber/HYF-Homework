@@ -1,5 +1,6 @@
 create database university_db; /* University Database - Educational Part*/
 SET CHARACTER SET utf8;
+use university_db; 
 
 create table roles(
 	 ID int(10) unsigned not null,
