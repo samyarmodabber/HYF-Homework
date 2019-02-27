@@ -3,10 +3,10 @@ SET CHARACTER SET utf8;
 use university_db; 
 
 create table roles(
-	 ID int(10) unsigned not null,
-	 name varchar(255),
-	 description varchar(255),
-     primary key (ID)
+	ID int(10) unsigned not null,
+	name varchar(255),
+	description varchar(255),
+    primary key (ID)
 );
 
 create table users (
