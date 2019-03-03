@@ -1,0 +1,11 @@
+.todo_item{
+    display: flex;
+}
+
+.isDone{
+    text-decoration:  line-through;
+}
+
+#delete{
+    background: pink
+}
