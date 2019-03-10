@@ -1,0 +1,12 @@
+.todo_item{
+    display: flex;
+}
+
+.isDone{
+    text-decoration:  line-through;
+}
+
+.btn{
+    color: pink;
+    margin:0px 10px;
+}
