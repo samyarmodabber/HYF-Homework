@@ -29,6 +29,9 @@ export default class Main extends Component {
     });
     this.setState({ todos });
   };
+  editTodo=id=>{
+
+  }
   toggleTodo = id => {
     const todos = this.state.todos.map((todo) => {
         if(todo.id===id){
@@ -38,6 +41,8 @@ export default class Main extends Component {
       });
     this.setState({todos});
   };
+
+  
   addTodo = todo => {
     todo.id = Math.random();
     const todos = [...this.state.todos, todo];

@@ -11,7 +11,8 @@ export default function Todos({ todos, deleteTodo,toggleTodo }) {
       return (
         <div key={todo.id} className="todo_item">
           <input type="checkBox" onClick={()=>{toggleTodo(todo.id)}} checked={todo.done} />
-          <div className={className}>{todo.description}</div>
+          <div className={className}>{todo.description} </div>
+          {/* <div className={todo.done?"isDone":""}>{todo.description} </div> */}
           <span onClick={() => {deleteTodo(todo.id);}} id='delete'> Delete </span>
         </div>
       );

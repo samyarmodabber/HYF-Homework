@@ -4,7 +4,7 @@ import AddTodo from "./AddTodo";
 
 export default class Main extends Component {
   state = {
-    isEditting:false,
+    isEditting: null,
     todos: [
       {
         id: 1,
@@ -30,30 +30,30 @@ export default class Main extends Component {
     });
     this.setState({ todos });
   };
-  
-  updateTodo=(e,id)=>{
-    e.preventDefault();
-    const todos = this.state.todos.map((todo) => {
-      if(todo.id===id){
-        todo.description=e.target.value
-      }
-      
-      return todo
-    });
-    this.setState({todos,isEditting:!this.state.isEditting});
-  }
 
-  toggleTodo = id => {
-    const todos = this.state.todos.map((todo) => {
-        if(todo.id===id){
-            todo.done=!todo.done
-        }
-        return todo
-      });
-    this.setState({todos});
+  updateTodo = (e, id) => {
+    e.preventDefault();
+    const todos = this.state.todos.map(todo => {
+      if (todo.id === id) {
+        todo.description = e.target.value;
+      }
+
+      return todo;
+    });
+
+    this.setState({ todos, isEditting: null });
   };
 
-  
+  toggleTodo = id => {
+    const todos = this.state.todos.map(todo => {
+      if (todo.id === id) {
+        todo.done = !todo.done;
+      }
+      return todo;
+    });
+    this.setState({ todos });
+  };
+
   addTodo = todo => {
     todo.id = Math.random();
     const todos = [...this.state.todos, todo];
@@ -61,8 +61,6 @@ export default class Main extends Component {
   };
 
   render() {
-    
-
     return (
       <div className="container">
         <AddTodo addTodo={this.addTodo} />
